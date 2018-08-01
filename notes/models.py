@@ -14,7 +14,7 @@ class Subject(models.Model):
 
 class FlashCard(models.Model):
     title = models.CharField(max_length=250)
-    notes = models.CharField(max_length=2500)
+    notes = models.TextField(max_length=2500)
     owner = models.ForeignKey(User)
     subject = models.ForeignKey(Subject)
     pub_date = models.DateTimeField(auto_now_add=True)
